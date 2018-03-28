@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+Enter Product Info Here:
+Go to Navigation:   <input type="button" value="Go To Inventory" (click)="goBack()" />
+
+<form class="form-group">
+  ProductId: <input #prodId class="form-control" type="text" name="productId" (input)="model.productId = $event.target.value" />
+  Product Name: <input class="form-control" type="text" name="productName"  (input)="model.productName = $event.target.value" />
+  <input id="skuId" type="text" name="skuId"  />
+  Sku id = {{'sku-'+ prodId.value}}
+
+  <button (click)="save('sku-'+ prodId.value)">Save </button>
+
+</form>
+</body>
+</html>

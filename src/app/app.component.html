@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+<ul>
+  <li><a [routerLink]="['/Product']">Product</a></li>
+  <li><a [routerLink]="['']">Stock</a></li>
+</ul>
+
+
+<router-outlet></router-outlet>
+-->
+<store-product [count]="initialCount" (produce)="h=$event; onCountComplete()"></store-product>
+Parent =  {{initialCount}}
+</body>
+</html>
